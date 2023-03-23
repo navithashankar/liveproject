@@ -1,0 +1,575 @@
+{% extends 'headerfooter.html' %}
+{% block content %}
+
+
+<div class="home-banner-area banner-three">
+<div class="container-fluid">
+<div class="banner-slider owl-carousel">
+<div class="slider-item">
+<div class="container">
+<div class="row">
+<div class="col-lg-7">
+<div class="banner-content">
+<h1>
+We Are Your <span>Dream</span> Builders
+</h1>
+<p>
+You can dream, create, design, and build the most wonderful place in the world. But it requires people to make the dream a reality.
+</p>
+<div class="cta-btn">
+<a href="/services/" class="primary-btn">Explore Services</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="slider-item">
+<div class="container">
+<div class="row">
+<div class="col-lg-7">
+<div class="banner-content">
+<h1>
+We Build Your <span>Dream</span> Home
+</h1>
+<p>
+You can dream, create, design, and build the most wonderful place in the world. But it requires people to make the dream a reality.
+</p>
+<div class="cta-btn">
+<a href="/services/" class="primary-btn">Explore Services</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="slider-item">
+<div class="container">
+<div class="row">
+<div class="col-lg-7">
+<div class="banner-content">
+<h1>
+We Are All Over The <span>World</span>
+</h1>
+<p>
+You can dream, create, design, and build the most wonderful place in the world. But it requires people to make the dream a reality.
+</p>
+<div class="cta-btn">
+<a href="/services/" class="primary-btn">Explore Services</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<section id="about" class="about-section about-style-three pt-100 pb-70">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-7">
+<div class="about-img-content">
+<div class="row">
+<div class="col-lg-6 col-sm-6 col-6">
+<div class="about-image">
+<img src="/static/img/about/about-img-4.jpg" alt="Demo Image">
+</div>
+<div class="about-image">
+<img src="/static/img/about/about-img-5.jpg" alt="Demo Image">
+</div>
+</div>
+<div class="col-lg-6 col-sm-6 col-6">
+<div class="about-image">
+<img src="/static/img/about/about-img-6.jpg" alt="Demo Image">
+</div>
+<div class="about-image">
+<img src="/static/img/about/about-img-7.jpg" alt="Demo Image">
+</div>
+</div>
+</div>
+<div class="overlay-content">
+<h3>25+</h3>
+<span>Years</span>
+</div>
+</div>
+</div>
+<div class="col-lg-5">
+<div class="about-content">
+<h2 class="color-secondary">We Build Everything As Your <span>Dream</span></h2>
+<p>You can dream, create, design and build the most place in the world. But it requires manpower.</p>
+<p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet consectetur.</p>
+<div class="about-item-list">
+<ul>
+<li><i class="flaticon-play-button"></i>100% Satisfaction Guarantee.</li>
+<li><i class="flaticon-play-button"></i> Accurate Testing Processes.</li>
+<li><i class="flaticon-play-button"></i> 35+ Years Of Experience. </li>
+<li><i class="flaticon-play-button"></i> Strong Building Materials.</li>
+<li><i class="flaticon-play-button"></i> Eco-Friendly Build Materials.</li>
+</ul>
+</div>
+<div class="cta-btn">
+<a href="/about/" class="primary-btn">Explore About Us</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="our-works-section ptb-100 bg-secondary">
+<div class="container">
+<div class="row">
+<div class="col-lg-5">
+<div class="works-content">
+<h2 class="color-secondary">See How We Manage Our <span>Works</span></h2>
+<p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet consectetur.</p>
+<div class="works-item">
+<div class="works-item-single">
+<i><img src="/static/img/icons/architect.png" alt="Icon"></i>
+<div class="content">
+<h4>Project <br> Planning</h4>
+</div>
+</div>
+<div class="works-item-single">
+<i><img src="/static/img/icons/plan.png" alt="Icon"></i>
+<div class="content">
+<h4>General <br> Contract</h4>
+</div>
+</div>
+<div class="works-item-single">
+<i><img src="/static/img/icons/bridge.png" alt="Icon"></i>
+<div class="content">
+<h4>Starting <br> Project</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-7">
+<div class="works-image">
+<img src="/static/img/video-img-1.jpg" alt="Demo Image">
+<a href="https://www.youtube.com/watch?v=4Y31MD36xF4" class="video-btn youtube-popup">
+<i class="flaticon-play-button"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="best-service-section service-two ptb-100">
+<div class="container">
+<div class="section-title style-two">
+<h2 class="color-secondary">We Provide Best <span>Services</span></h2>
+<p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</div>
+<div class="row">
+	{% for x in prd %}
+<div class="col-lg-4">
+<div class="service-item-single">
+<i><img src="/static/img/icons/bricks.png" alt="Icon"></i>
+<h3><a href="/catagory/?cid={{x.id}}">{{x.catagory}}</a></h3>
+<p>You can dream, create, design, and build the most wonder ful place in the world. But it requires people.</p>
+
+</div>
+</div>
+ 
+{% endfor %}
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+<section id="renovate" class="renovate-section pt-100 pb-70">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-7">
+<div class="image-content">
+<div class="row">
+<div class="col-lg-12">
+<div class="image">
+<img src="/static/img/renovate.png" alt="Demo Image">
+</div>
+</div>
+ </div>
+</div>
+</div>
+<div class="col-lg-5">
+<div class="content">
+<h2 class="color-secondary">See How We <span>Renovate</span> A Dream House</h2>
+<p>You can dream, create, design and renovate the most place in the world. But it requires more peoples.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius mod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices.</p>
+<div class="item-list">
+<ul>
+<li><i class="flaticon-play-button"></i>100% Satisfaction Guarantee.</li>
+<li><i class="flaticon-play-button"></i> Accurate Testing Processes.</li>
+<li><i class="flaticon-play-button"></i> 35+ Years Of Experience. </li>
+<li><i class="flaticon-play-button"></i> Strong Building Materials.</li>
+<li><i class="flaticon-play-button"></i> Eco Friendly Build Materials.</li>
+</ul>
+</div>
+<p>You can dream, create, design and renovate the most place in the world. But it requires more peoples.</p>
+
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section id="build" class="build-section pt-100 pb-70">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-5">
+<div class="content">
+<h2 class="color-secondary">We Also <span>Build</span> From The Scratch</h2>
+<p>You can dream, create, design and renovate the most place in the world. But it requires more peoples.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius mod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices.</p>
+<div class="item-list">
+<ul>
+<li><i class="flaticon-play-button"></i>100% Satisfaction Guarantee.</li>
+<li><i class="flaticon-play-button"></i> Accurate Testing Processes.</li>
+<li><i class="flaticon-play-button"></i> 35+ Years Of Experience. </li>
+<li><i class="flaticon-play-button"></i> Strong Building Materials.</li>
+<li><i class="flaticon-play-button"></i> Eco-Friendly Build Materials.</li>
+</ul>
+</div>
+<p>You can dream, create, design and renovate the most place in the world. But it requires more peoples.</p>
+
+</div>
+</div>
+<div class="col-lg-7">
+<div class="image-content">
+<div class="row">
+<div class="col-lg-12">
+<div class="image">
+<img src="/static/img/build.png" alt="Demo Image">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<!-- <section class="quote-section pt-100 pb-70">
+<div class="container">
+<div class="row align-items-end">
+<div class="col-lg-6">
+<div class="contact-form">
+<h2 class="color-secondary">Get A Free <span>Quote</span></h2>
+<form action="/index/" method="post" id='contactForm' enctype="multipart/form-data">
+{% csrf_token %}
+ <h4 style="color: red;text-align: center;">{{error}}</h4>
+<div class="row">
+<div class="col-lg-12">
+<div class="form-group">
+<input type="text" name="name" class="form-control" id="name" required="" data-error="Please enter your name" placeholder="Name">
+<div class="help-block with-errors"></div>
+</div>
+</div>
+<div class="col-lg-12">
+<div class="form-group">
+<input type="email" name="email" class="form-control" id="email" required="" data-error="Please enter your email" placeholder="Email">
+<div class="help-block with-errors"></div>
+</div>
+</div>
+<div class="col-lg-12">
+<div class="form-group">
+<input type="tel" name="phone" class="form-control" id="phone" required="" data-error="Please enter your phone number" placeholder="Phone No">
+<div class="help-block with-errors"></div>
+</div>
+</div>
+<div class="col-lg-12">
+<div class="form-group">
+<input type="text" name="address" class="form-control" id="address" required="" data-error="Please enter your address" placeholder="Address">
+<div class="help-block with-errors"></div>
+</div>
+</div>
+<div class="col-lg-12">
+<div class="form-group">
+<div class="select-box">
+<select name="catagory" id="CATAGORY" class="form-control">
+	<option  selected>Select One</option> 
+	<option value="Architecture">Architecture</option> 
+	<option value="Construction">Construction</option> 
+	<option value="Painting & tiling">Painting&tiling</option> 
+	<option value="Interior Design">Interior Design</option> 
+	<option value="Area Renovation"> Area Renovation</option> 
+	<option value="Road Construction"> Road Construction</option> 
+</select>
+</div>
+</div>
+</div>
+<div class="col-lg-12">
+<button type="submit" value="submit" class="primary-btn">Submit</button>
+<div id="msgSubmit" class="h5 text-center hidden"></div>
+</div>
+</div>
+</form>
+</div>
+</div>
+<div class="col-lg-6">
+<div class="image">
+<img src="/static/img/quote-img.png" alt="Demo Image">
+</div>
+</div>
+</div>
+</div>
+</section> -->
+
+
+<section class="faq-section pt-100 pb-70 bg-secondary">
+<div class="container">
+<div class="section-title style-two">
+<h2 class="color-secondary">Get Every Answer Of <span>Questions</span></h2>
+<p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</div>
+<div class="panel-group" id="accordion">
+<div class="row">
+<div class="col-lg-6">
+<div class="panel">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a class="collapsed" data-bs-toggle="collapse" href="#collapse1">
+What are the benefits to work with Constik?
+</a>
+</h4>
+</div>
+<div id="collapse1" class="panel-collapse collapse" data-bs-parent="#accordion">
+<div class="panel-body">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+</div>
+</div>
+</div>
+<div class="panel">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a class="collapsed" data-bs-toggle="collapse" href="#collapse2">
+Where can I find out about funding?
+</a>
+</h4>
+</div>
+<div id="collapse2" class="panel-collapse collapse" data-bs-parent="#accordion">
+<div class="panel-body">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+</div>
+</div>
+</div>
+<div class="panel">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a class="collapsed" data-bs-toggle="collapse" href="#collapse3">
+How to pay a single house projects?
+</a>
+</h4>
+</div>
+<div id="collapse3" class="panel-collapse collapse" data-bs-parent="#accordion">
+<div class="panel-body">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+</div>
+</div>
+</div>
+<div class="panel">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a class="collapsed" data-bs-toggle="collapse" href="#collapse4">
+What will happen when I’ve sent my application?
+</a>
+</h4>
+</div>
+<div id="collapse4" class="panel-collapse collapse" data-bs-parent="#accordion">
+<div class="panel-body">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6">
+<div class="panel">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a class="collapsed" data-bs-toggle="collapse" href="#collapse5">
+How can I make a change to my application?
+</a>
+</h4>
+</div>
+<div id="collapse5" class="panel-collapse collapse" data-bs-parent="#accordion">
+<div class="panel-body">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+</div>
+</div>
+</div>
+<div class="panel">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a class="collapsed" data-bs-toggle="collapse" href="#collapse6">
+Is it possible to request personalized projects?
+</a>
+</h4>
+</div>
+<div id="collapse6" class="panel-collapse collapse" data-bs-parent="#accordion">
+<div class="panel-body">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+ </div>
+</div>
+</div>
+<div class="panel">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a class="collapsed" data-bs-toggle="collapse" href="#collapse7">
+What are the benefits to work with Constik?
+</a>
+</h4>
+</div>
+<div id="collapse7" class="panel-collapse collapse" data-bs-parent="#accordion">
+<div class="panel-body">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+</div>
+</div>
+</div>
+<div class="panel">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a class="collapsed" data-bs-toggle="collapse" href="#collapse8">
+Do you sell also completed eco-houses?
+</a>
+</h4>
+</div>
+<div id="collapse8" class="panel-collapse collapse" data-bs-parent="#accordion">
+<div class="panel-body">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+<section class="count-section pt-100 pb-70">
+<div class="container">
+<div class="row">
+<div class="col-lg-3 col-md-6">
+<div class="content">
+<h2><span class="counter">25</span>+</h2>
+<span>Years of Experience</span>
+</div>
+</div>
+<div class="col-lg-3  col-md-6">
+<div class="content">
+<h2><span class="counter">500</span>+</h2>
+<span>Happy Clients</span>
+</div>
+</div>
+<div class="col-lg-3  col-md-6">
+<div class="content">
+<h2><span class="counter">250</span>+</h2>
+<span>Work Employed</span>
+</div>
+</div>
+<div class="col-lg-3  col-md-6">
+<div class="content">
+<h2><span class="counter">159</span>+</h2>
+<span>Project Completed</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="testimonial-section testimonial-three ptb-100 bg-primary">
+<div class="container">
+<div class="section-title style-two">
+<h2 class="color-secondary"><span>Thoughts</span> Of Our Satisfied Client About Us</h2>
+</div>
+<div class="row">
+<div class="col-lg-10 m-auto">
+<div class="testimonial-slider owl-carousel">
+<div class="slider-item">
+ <i class="flaticon-quotation-mark"></i>
+<p>
+There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected.
+</p>
+<div class="client-img">
+<img src="/static/img/client/client-1.jpg" alt="client-1" />
+</div>
+<div class="client-info">
+<h6>James Bond</h6>
+<span>CEO Of TCBuilders</span>
+</div>
+</div>
+<div class="slider-item">
+<i class="flaticon-quotation-mark"></i>
+<p>
+Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC
+</p>
+<div class="client-img">
+<img src="/static/img/client/client-2.jpg" alt="client-1" />
+</div>
+<div class="client-info">
+<h6>Helena Sam</h6>
+<span>CEO & Manager</span>
+</div>
+</div>
+<div class="slider-item">
+<i class="flaticon-quotation-mark"></i>
+<p>
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.
+</p>
+<div class="client-img">
+<img src="/static/img/client/client-3.jpg" alt="client-1" />
+</div>
+<div class="client-info">
+<h6>James Milan</h6>
+<span>Founder Member</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="newsletter-section newsletter-three bg-primary">
+<div class="container">
+<div class="row">
+<div class="col-lg-7">
+<div class="newsletter-content ptb-100">
+<!-- <h2>Subscribe Our Newsletter</h2>
+<form class="newsletter-form" data-bs-toggle="validator">
+<div class="input-group">
+<input class="form-control" placeholder="E-mail" type="text" name="EMAIL" required="" autocomplete="off">
+<div class="cta-btn">
+<button class="primary-btn" type="submit">
+Subscribe
+</button>
+</div>
+</div>
+<div id="validator-newsletter" class="form-result"></div>
+</form> -->
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+{% endblock %}

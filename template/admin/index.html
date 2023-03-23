@@ -1,0 +1,55 @@
+{% extends 'admin/headerfooter.html' %}
+{% block content %}
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script type="text/javascript">
+	{% if success %}
+   swal("{{success}}", "","success");
+   {% elif error %}
+   swal("{{error}}", "","error");
+   {% endif %}
+ </script>
+
+<style>
+	body {
+
+		background-color: #605c5c;
+	}
+
+
+
+	.center {
+	  padding: 70px 0;
+	  border: 3px solid rgb(32, 52, 55);
+	  text-align: center;
+	  background-color: #bdeff4;
+	}
+	</style>
+
+		<!-- main content start-->
+		<div id="page-wrapper">
+			<div class="main-page">
+				<div class="row-one" style="margin-top:200px; margin-left: 260px; margin-bottom: 200px;  justify-content: center;">
+					
+					
+					<div class="col-md-4 widget center"> 
+						
+							<h2><a href="/myadmin/forms/">Forms</a></h2>
+							
+					</div>
+					<div class="col-md-4 widget states-mdl center">
+						
+							<h2><a href="/myadmin/cat_form/">Category Form</a></h2>
+						
+					</div>
+
+
+					
+
+					<div class="clearfix"> </div>	
+				</div>
+				
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		{% endblock %}

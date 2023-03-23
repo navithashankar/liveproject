@@ -1,0 +1,48 @@
+{% extends 'headerfooter.html' %}
+{% block content %}
+
+
+
+<div class="page-title-area ptb-100">
+<div class="container">
+<div class="page-title-content">
+<h1>Category</h1>
+<ul>
+<li class="item"><a href="/">Home</a></li>
+<li class="item"><a href="/services/"><i class="flaticon-play-button"></i>Category</a></li>
+</ul>
+</div>
+</div>
+<div class="bg-image">
+<img src="/static/img/page-title/service-grid-bg.jpg" alt="Demo Image">
+</div>
+</div>
+
+
+<section class="best-service-section service-two ptb-100">
+<div class="container">
+<div class="section-title style-two">
+<h2 class="color-secondary"><span>Category Details</span></h2>
+</div>
+<div class="row">
+{% for x in prd %}
+<div class="col-lg-4">
+<div class="service-item-single">
+<i><img src="/static/img/icons/bricks.png" alt="Icon"></i>
+<h3><a href="/services_details/?sid={{x.id}}">{{x.name}}</a></h3>
+<p>You can dream, create, design, and build the most wonder ful place in the world. But it requires people.</p>
+<div class="cta-btn">
+<a href="/services_details/?sid={{x.id}}" class="read-more-btn"><i class="flaticon-play-button"></i> Read More</a>
+</div>
+</div>
+</div>
+ 
+{% endfor %}
+</div>
+
+</div>
+
+</section>
+
+
+{% endblock %}

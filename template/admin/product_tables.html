@@ -1,0 +1,47 @@
+{% extends 'admin/headerfooter.html' %}
+{% block content %}
+		<!-- main content start-->
+		<div id="page-wrapper">
+			<div class="main-page">
+				<div class="tables">
+					<h3 class="title1" style="text-align: center;"><b>Selected Product</b></h3>
+					<div class="panel-body widget-shadow">
+						<h4>Basic Table:</h4>
+						<table class="table">
+							<thead>
+								<tr>
+								  <th data-breakpoints="xs">ID</th>
+								  <th>Name</th>
+								  <th>Price</th>
+								  <th>Offprice</th>
+								  <th>Details</th>
+								  <th>Catagory</th>
+								  <th>Product Image</th>
+								</tr>
+							</thead>
+							<tbody>
+								{% for x in prd %}
+								<tr>
+								  <td>{{forloop.counter}}</td>
+								  <td>{{x.name}}</td>
+								  <td>{{x.price}}</td>
+								  <td>{{x.offprice}}</td>
+								  <td>{{x.details}} </td>
+								  <td>{{x.catagory.catagory}}</td>
+								  <td><img src="{{x.proimage.url}}" style="width: 100px; height: 100px;object-fit: contain;" alt="" ></td>
+								  <td><a href="/myadmin/product_update/?pid={{x.id}}">Edit</a></td>
+          						  <td><a href="/myadmin/product_delete/?pid={{x.id}}">Delete</a></td>
+
+								</tr>
+								 {% endfor %}
+							</tbody>
+						</table>
+					</div>
+					
+					
+					
+					
+				</div>
+			</div>
+		</div>
+		{% endblock %}

@@ -1,0 +1,107 @@
+{% extends 'headerfooter.html' %}
+{% block content %}
+
+
+<div class="page-title-area ptb-100">
+<div class="container">
+<div class="page-title-content">
+<h1>Contact Us</h1>
+<ul>
+<li class="item"><a href="/index/">Home</a></li>
+<li class="item"><a href="/contact/"><i class="flaticon-play-button"></i>Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class="bg-image">
+<img src="/static/img/page-title/contact-bg.jpg" alt="Demo Image">
+</div>
+</div>
+
+
+<div class="contact-area pt-100 pb-70">
+<div class="container">
+<div class="row">
+<div class="col-lg-4">
+<div class="contact-info">
+<div class="info-item" style="padding: 70px; text-align: center;">
+<i class='flaticon-smartphone'></i>
+<div class="info-content">
+<p>call us</p>
+<a href="tel:+14854560102">(009) 01361246741 </a>
+</div>
+</div><br>
+<div class="info-item" style="padding: 70px; text-align: center;">
+<i class='flaticon-email'></i>
+<div class="info-content">
+<p>mail us</p>
+<a href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#721a171e1e1d32111d1c01061b195c111d1f"><span class="__cf_email__" data-cfemail="630b060f0f0c23000c0d10170a084d000c0e">[email&#160;protected]</span></a>
+</div>
+</div><br>
+<div class="info-item" style="padding: 70px; text-align: center;">
+<i class='flaticon-address'></i>
+<div class="info-content">
+<p>visit us</p>
+<a href="#">32,Wales Street,USA</a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-8">
+<div class="contact-form">
+<div class="content">
+<h3>Get In touch</h3>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus totam minima quam a ab cumque eos nulla eaque animi non natus totam minima quam.</p>
+</div>
+<form action="/contact/" method="post" enctype="multipart/form-data">
+	{% csrf_token %}
+<div class="form-group">
+<input type="text" name="Name" class="form-control" id="Name" required="" data-error="Please enter your name" placeholder="Name" />
+<div class="help-block with-errors"></div>
+</div>
+<div class="form-group">
+<input type="text" name="Mobileno" class="form-control" id="Mobileno" required="" data-error="Please enter your mobile no" placeholder="Mobile No" />
+<div class="help-block with-errors"></div>
+</div>
+<div class="form-group">
+<input type="text" name="Subject" class="form-control" id="Subject" required="" data-error="Please enter your Subject" placeholder="Subject" />
+<div class="help-block with-errors"></div>
+</div>
+<div class="form-group">
+<input type="email" name="Email" class="form-control" id="Email" required="" data-error="Please enter your Email Id" placeholder="Email Id" />
+<div class="help-block with-errors"></div>
+</div>
+<div class="form-group">
+<textarea name="Message" id="message" class="form-control" cols="30" rows="6" required="" data-error="Please enter your message" placeholder="Requirements..."></textarea>
+<div class="help-block with-errors"></div>
+</div>
+<div class="col-lg-12 col-md-12">
+<div class="form-group">
+<div class="form-check checkbox agree-label">
+<input name="gridCheck" value="I agree to the terms and privacy policy." class="form-check-input" type="checkbox" id="gridCheck" required>
+<label class="form-check-label" for="gridCheck">
+I agreed Constik <a href="/our_services/">Terms of Services</a> and <a href="privacy-policy.html">Privacy Policy</a>
+</label>
+<div class="help-block with-errors gridCheck-error"></div>
+</div>
+</div>
+</div>
+<div class="cta-btn">
+<button type="submit" class="primary-btn" value="Submit">Submit</button>
+<div id="msgSubmit" class="h5 text-center hidden"></div>
+</div>
+</form>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-12">
+<div class="contact-map">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14823.53387790955!2d-74.10481152434619!3d40.63980156434487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24e10d24b9eb3%3A0xdbac10f1e9c9180b!2s32%20Wales%20Pl%2C%20Staten%20Island%2C%20NY%2010310%2C%20USA!5e0!3m2!1sen!2sbd!4v1602133511419!5m2!1sen!2sbd"></iframe>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+{% endblock %}

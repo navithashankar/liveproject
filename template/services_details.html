@@ -1,0 +1,155 @@
+{% extends 'headerfooter.html' %}
+
+{% block content %}
+
+
+
+
+<div class="page-title-area ptb-100">
+<div class="container">
+<div class="page-title-content">
+<h1>Our Services</h1>
+<ul>
+<li class="item"><a href="/">Home</a></li>
+<li class="item"><a href="/our_services/"><i class="flaticon-play-button"></i>Our Services</a></li>
+</ul>
+</div>
+</div>
+<div class="bg-image">
+<img src="/static/img/page-title/terms-bg.jpg" alt="Demo Image">
+</div>
+</div>
+
+
+<section class="best-service-section service-two ptb-100">
+	<h2 style="text-align: center;"><u></u></h2>
+<div style="padding-top: 50px; padding-left: 510px; padding-bottom: 50px";> 
+{% for x in prd %}
+<div class="col-lg-6">
+<div class="details-desc">
+<div class="content">
+	<h2 style="text-align: center;"><u>{{x.name}}</u></h2>
+</div><br>
+<!-- <div class="service-details-slider owl-carousel"> -->
+<div class="slider-item" >
+<img src="{{x.proimage.url}}" style="width:100%;height:100%; object-fit: cover;" alt="Demo Image">
+</div><br>
+
+
+
+<div class="content">
+<h3 style="text-align: center;"><i>category</i>	-	{{x.catagory.catagory}}</h3>
+</div>
+
+<div class="content">
+<h3 style="text-align: center;"><i>Details</i>	-	<span>{{x.details}}</span></h3>
+</div>
+
+<div class="content">
+<h3 style="text-align: center;"><i>price</i>	-	{{x.price}}</h3>
+</div>
+
+<div class="content">
+<h3 style="text-align: center;"><i>Offprice</i>	-	{{x.offprice}}</h3>
+</div>
+
+</div>
+</div>
+{% endfor %}
+</div>
+<!-- <div class="cta-btn" style="margin-left: 700px; padding-bottom: 50px"> -->
+<div class="container mt-3">
+<!-- <h3>Modal Example</h3>
+<p>Click on the button to open the modal.</p> -->
+  
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" style="margin-left: 600px">
+    ENQUIRY
+  </button>
+</div>
+
+<!-- The Modal -->
+
+
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+
+
+    	  <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">User Data</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+
+
+       <!-- Modal body -->
+       {% for x in prd %}
+      <div class="modal-body">
+      	<form action="/services_details/?sid={{x.id}}" method="post">
+{% csrf_token %}
+
+      <div class="form-group">
+      <input type="text" name="Name" class="form-control" id="Name" required="" data-error="Please enter your name" placeholder="Name" />
+			<div class="help-block with-errors"></div>
+			</div>
+
+			<div class="form-group">
+			<input type="email" name="Email" class="form-control" id="Email" required="" data-error="Please enter your Email ID" placeholder="Email ID" />
+			<div class="help-block with-errors"></div>
+			</div>
+
+
+			<div class="form-group">
+			<input type="text" name="Mobileno" class="form-control" id="Mobileno" required="" data-error="Please enter your mobile no" placeholder="Mobile No" />
+			<div class="help-block with-errors"></div>
+			</div>
+
+			<div class="form-group">
+			<textarea name="Details" id="Details" class="form-control" cols="30" rows="6" required="" data-error="Please enter your Details" placeholder="Details..."></textarea>
+			<div class="help-block with-errors"></div>
+			</div>
+
+
+			<!-- Modal footer -->
+      		<div class="modal-footer">
+        	<button type="submit" class="btn btn-success" data-bs-dismiss="modal">Save</button>
+      		</div>
+
+      		</form>
+          {% endfor %}
+    		</div>
+
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="newsletter-section newsletter-three bg-primary">
+<div class="container">
+<div class="row">
+<div class="col-lg-6">
+<div class="newsletter-content ptb-100">
+<!-- <h2>Subscribe Our Newsletter</h2>
+<form class="newsletter-form" data-toggle="validator">
+<div class="input-group">
+<input class="form-control" placeholder="E-mail" type="text" name="EMAIL" required="" autocomplete="off">
+<div class="cta-btn">
+<button class="primary-btn" type="submit">
+Subscribe
+</button>
+</div>
+</div>
+<div id="validator-newsletter" class="form-result"></div>
+</form> -->
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+{% endblock %}
